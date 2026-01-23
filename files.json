@@ -7,6 +7,12 @@
       "path": "downloads/bizNode_v0.2.1.zip"
     },
     {
+      "title": "bizmob3-jquery-app",
+      "description": "jQuery 기반의 bizMOB 3.5 하이브리드 앱 개발을 위한 jQuery 프로젝트",
+      "filename": "bizmob3-jquery-app_260123.zip",
+      "path": "downloads/bizmob3-jquery-app_260123.zip"
+    },
+    {
       "title": "bizmob4-vue-app",
       "description": "Vue 3 + Vite + TypeScript 기반의 bizMOB 4.0 하이브리드 앱 개발을 위한 Vue 3 프로젝트",
       "filename": "bizmob4-vue-app_260123.zip",
@@ -19,10 +25,10 @@
       "path": "downloads/bizmob4-vue-web_260123.zip"
     },
     {
-      "title": "bizmob3-jquery-app",
-      "description": "jQuery 기반의 bizMOB 3.5 하이브리드 앱 개발을 위한 jQuery 프로젝트",
-      "filename": "bizmob3-jquery-app_260123.zip",
-      "path": "downloads/bizmob3-jquery-app_260123.zip"
+      "title": "bizmob4-springboot-web",
+      "description": "Java 기반의 bizMOB 4.0 웹 서버 개발을 위한 Spring Boot 프로젝트",
+      "filename": "bizmob4-springboot-web_260123.zip",
+      "path": "downloads/bizmob4-springboot-web_260123.zip"
     }
   ]
 }
