@@ -3,7 +3,7 @@
 
 ## 📋 소개
 
-GitHub Pages를 통해 ZIP 파일을 다운로드할 수 있는 정적 웹사이트입니다. 
+GitHub Pages를 통해 ZIP 파일을 다운로드할 수 있는 정적 웹사이트입니다.
 사내에서 개발된 프로젝트 소스를 압축하여 배포할 수 있습니다.
 
 ## 🚀 기능
@@ -83,13 +83,13 @@ https://[사용자명 또는 조직명].github.io/repo-downloader/
 
 ```bash
 # Python 3를 사용하는 경우
-python3 -m http.server 8000
+python3 -m http.server 8080
 
 # Node.js를 사용하는 경우
 npx http-server
 
 # 그 후 브라우저에서 접속
-# http://localhost:8000
+# http://localhost:8080
 ```
 
 ## 📝 주의사항

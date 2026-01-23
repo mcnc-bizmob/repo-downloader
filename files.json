@@ -1,10 +1,28 @@
 {
   "files": [
     {
-      "title": "샘플 프로젝트 v1.0",
-      "description": "첫 번째 샘플 프로젝트입니다. 이 프로젝트는 데모용으로 제공되며, 실제 프로젝트 소스 파일을 압축한 형태입니다.",
-      "filename": "sample-project-v1.0.zip",
-      "path": "downloads/sample-project-v1.0.zip"
+      "title": "bizNode v0.2.1",
+      "description": "bizMOB 3.5 프로젝트 수행시 VSCode IDE 개발 환경을 위한 웹 서버 실행 파일",
+      "filename": "bizNode_v0.2.1.zip",
+      "path": "downloads/bizNode_v0.2.1.zip"
+    },
+    {
+      "title": "bizmob4-vue-app",
+      "description": "Vue 3 + Vite + TypeScript 기반의 bizMOB 4.0 하이브리드 앱 개발을 위한 Vue 3 프로젝트",
+      "filename": "bizmob4-vue-app_260123.zip",
+      "path": "downloads/bizmob4-vue-app_260123.zip"
+    },
+    {
+      "title": "bizmob4-vue-web",
+      "description": "Vuetify Material Pro 테마 기반의 bizMOB 4.0 웹 개발을 위한 Vue 3 프로젝트",
+      "filename": "bizmob4-vue-web_260123.zip",
+      "path": "downloads/bizmob4-vue-web_260123.zip"
+    },
+    {
+      "title": "bizmob3-jquery-app",
+      "description": "jQuery 기반의 bizMOB 3.5 하이브리드 앱 개발을 위한 jQuery 프로젝트",
+      "filename": "bizmob3-jquery-app_260123.zip",
+      "path": "downloads/bizmob3-jquery-app_260123.zip"
     }
   ]
 }
