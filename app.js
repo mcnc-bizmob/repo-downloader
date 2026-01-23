@@ -17,40 +17,63 @@ async function loadFileList() {
             return;
         }
         
-        // Create file list HTML
-        const fileListHTML = files.map(file => `
-            <div class="file-item" onclick="downloadFile('${file.filename}')">
-                <h2>${escapeHtml(file.title)}</h2>
-                <div class="description">${escapeHtml(file.description)}</div>
-                <div class="file-info">
-                    <span class="filename">${escapeHtml(file.filename)}</span>
-                    <a href="${file.path}" class="download-btn" download onclick="event.stopPropagation()">다운로드</a>
-                </div>
-            </div>
-        `).join('');
+        // Clear container
+        fileListContainer.innerHTML = '';
         
-        fileListContainer.innerHTML = fileListHTML;
+        // Create file list elements
+        files.forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.dataset.index = index;
+            
+            const title = document.createElement('h2');
+            title.textContent = file.title;
+            
+            const description = document.createElement('div');
+            description.className = 'description';
+            description.textContent = file.description;
+            
+            const fileInfo = document.createElement('div');
+            fileInfo.className = 'file-info';
+            
+            const filename = document.createElement('span');
+            filename.className = 'filename';
+            filename.textContent = file.filename;
+            
+            const downloadLink = document.createElement('a');
+            downloadLink.href = file.path;
+            downloadLink.className = 'download-btn';
+            downloadLink.download = '';
+            downloadLink.textContent = '다운로드';
+            
+            // Prevent propagation when clicking the download button
+            downloadLink.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+            
+            fileInfo.appendChild(filename);
+            fileInfo.appendChild(downloadLink);
+            
+            fileItem.appendChild(title);
+            fileItem.appendChild(description);
+            fileItem.appendChild(fileInfo);
+            
+            // Add click handler to file item
+            fileItem.addEventListener('click', () => {
+                downloadLink.click();
+            });
+            
+            fileListContainer.appendChild(fileItem);
+        });
         
     } catch (error) {
         console.error('Error loading file list:', error);
-        fileListContainer.innerHTML = `<div class="error">오류: ${escapeHtml(error.message)}</div>`;
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'error';
+        errorDiv.textContent = `오류: ${error.message}`;
+        fileListContainer.innerHTML = '';
+        fileListContainer.appendChild(errorDiv);
     }
-}
-
-// Download file when clicking on file item
-function downloadFile(filename) {
-    // Find the download link and trigger click
-    const link = document.querySelector(`a[download][href*="${filename}"]`);
-    if (link) {
-        link.click();
-    }
-}
-
-// Escape HTML to prevent XSS
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
 }
 
 // Load file list on page load
