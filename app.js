@@ -13,12 +13,16 @@ async function loadFileList() {
         const files = data.files;
         
         if (!files || files.length === 0) {
-            fileListContainer.innerHTML = '<div class="empty">다운로드 가능한 파일이 없습니다.</div>';
+            const emptyDiv = document.createElement('div');
+            emptyDiv.className = 'empty';
+            emptyDiv.textContent = '다운로드 가능한 파일이 없습니다.';
+            fileListContainer.textContent = '';
+            fileListContainer.appendChild(emptyDiv);
             return;
         }
         
         // Clear container
-        fileListContainer.innerHTML = '';
+        fileListContainer.textContent = '';
         
         // Create file list elements
         files.forEach((file, index) => {
@@ -71,7 +75,7 @@ async function loadFileList() {
         const errorDiv = document.createElement('div');
         errorDiv.className = 'error';
         errorDiv.textContent = `오류: ${error.message}`;
-        fileListContainer.innerHTML = '';
+        fileListContainer.textContent = '';
         fileListContainer.appendChild(errorDiv);
     }
 }
